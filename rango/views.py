@@ -9,6 +9,11 @@ from rango.bing_search import run_query
 from django.shortcuts import redirect
 from django.utils.datastructures import MultiValueDictKeyError
 
+# VIEW FOR ADMIN PAGE REDIRECT
+def admin(request):
+    if request.method == 'GET':
+        return HttpResponseRedirect('/admin/')
+
 
 # SERVER SIDE COOKIE EXAMPLE
 def index(request):
