@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Restricted Page{% endblock %}
+
+{% block body_block %}
+    <div class="page-header">
+        <h3>This is a restricted page that can only be accessed by those who are registered and logged in!</h3>
+    </div>
+{% endblock %}
