@@ -105,10 +105,20 @@ def category(request, category_name_slug):
     context_dict['result_list'] = None
     context_dict['query'] = None
     if request.method == 'POST':
+         # This method handles the exception where a default query string is not given.
+        query = request.POST.get('query', False)
+
+        '''
+        Could also use this method of exception handling
+
         try:
             query = request.POST['query'].strip()
         except MultiValueDictKeyError:
             query = False
+
+        '''
+
+
         if query:
             # Run our Bing function to get the results list!
             result_list = run_query(query)
