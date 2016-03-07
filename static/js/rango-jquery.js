@@ -1,9 +1,15 @@
 $(document).ready( function() {
 
-    $("#btn").click( function(event) {
+    $("p").hover( function() {
+            $(this).css('color', 'red');
+    },
+    function() {
+            $(this).css('color', 'blue');
+    });
+
+    $("#about-btn").click( function(event) {
         msgstr = $("#msg").html()
-        msgstr = msgstr + "ofuckmesideways"
+        msgstr = msgstr + "ooooooooooo"
         $("#msg").html(msgstr)
  });
-
 });
